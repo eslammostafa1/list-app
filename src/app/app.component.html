@@ -1,0 +1,9 @@
+<div style="text-align: center;">
+<h1 > welcome to my {{title}}</h1>
+
+
+<h3> Enter your task </h3>
+<input class="btn btn-success"  style="width: 50%;" [(ngModel)]="todo" type="text" >
+<button (click)="addTask(todo)">add task</button>
+
+<p *ngFor="let todo of todos; index as i;">{{i + 1}} - {{todo}}<button class="btn btn-danger" (click)="deleteTask(i)">remove</button></p>
